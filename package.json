@@ -2,13 +2,19 @@
     "name": "portfolio",
     "version": "1.0.0",
     "description": "My personal portfolio",
-    "main": "index.js",
+    "main": "index.ejs",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
+    "author": "",
     "repository": {
-        "type": "git", 
+        "type": "git",
         "url": "git+https://github.com/Yahshemi/portfolio.get"
     },
-    "homepage": "https://github.com/Yahshemi/portfolio#readme"
+    "homepage": "https://github.com/Yahshemi/portfolio#readme",
+    "dependencies": {
+        "body-parser": "~1.18.3",
+        "express": "^4.16.4",
+        "morgan": "^1.9.1"
     }
+}
