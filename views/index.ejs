@@ -3,6 +3,9 @@
   <head>
   <meta charset="UTF-8">
     <title>Yahshemi's Portfolio</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" 
+    crossorigin="anonymous">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -213,7 +216,7 @@
     .row-halves{
       display: -webkit-box;
       display: -ms-flexbox;
-      display: -ms-flex;
+      display: flex;
       justify-content: space-between;
       margin: 20px 0;
       -webkit-flex-pack:justify;
@@ -324,7 +327,7 @@ color: #009688;
   }
   .row-halves .col{
     width: 100%;
-    margin: 0 0 10px 0;
+    margin: 0 0 50px 0;
   }
 }
 
@@ -419,6 +422,12 @@ color: #222;
           ><i class="material-icons md-36">mail</i>
           <p>Contact</p>
         </a>
+
+        <a href="https://github.com/Yahshemi" target="_blank"
+        ><i class="fab fa-github fa-4x"></i>
+        <p>Git Hub</p>
+        </a>
+
       </nav>
     </aside>
 
@@ -427,11 +436,15 @@ color: #222;
       <a href="#about">About</a>
       <a href="#portfolio">Portfolio</a> 
       <a href="#contact">Contact</a>
+      <a href="https://github.com/Yahshemi" target="_blank">Git Hub</a>
     </nav>
 
     <main>
       <header class='home' id= 'home'> <br><br>
-        <h1>I am Yahshemi Walters</h1>
+        <hr size="3" noshade>
+        <h1>Yahshemi Walters</h1>
+        <hr size="3" noshade>
+        <br>
         <h5>Junior Web Developer</h5>
         <img
         class="img-yahshemi-bw"
@@ -446,19 +459,21 @@ color: #222;
     <section class="about" id='about'>
       <h2>About Me</h2>
       <p> 
-          <span>Hello I am  <%= person.firstName %> <%= person.lastName %>
-          </span>I am a full stack web developer.
-          I did my studies at the San Diego Code School. I like music 
-          and art, and experiencing different cultures. I recently got
-          into photography, and I really enjoy it. I shoot with a Canon
-          Rebel T3, which is an older model, but it still captures really
-          great shots.
+          <span>Hello my name is <%= person.firstName %> <%= person.lastName %>
+          </span>. I am a full stack web developer.
+          I studied web development at the San Diego Code School, where I learned 
+          HTML, CSS, JavaScript, React, Jquery, Express, Bootstrap, and many more. 
+          I enjoy listening to music, going to art galleries, and experiencing 
+          different cultures. I recently picked up photography, and I really enjoy it. 
+          I shoot with a Canon Rebel T3, which is an older model, but it still captures 
+          really great shots. I plan to continue to further my education in web development
+          in order to one day become a senior web developer. 
       </p>
 
       <p>
-          I believe that the way we interact with the world around us, is
+          "I believe that the way we interact with the world around us, is
           shaped by those who create the conduits through which we go about
-          our daily lives.
+          our daily lives."
       </p>
 
       <h3>My Skills</h3>
@@ -497,26 +512,32 @@ color: #222;
     
     <h2>Portfolio</h2>
 
-    <div class='row-halves'>
+     <div class= "row-halves">
       <div class='col'>
+      <a href="https://yw-react-vstda.herokuapp.com/" target="_blank">
           <img
           class="img-todo"
         src="img/todo.jpg"
         alt="A photo of a todo list"
         />
+       
         <h3>A Very Simple To-Do App</h3>
+        </a>
         <p>Stay organized with this very simple to-do app. Keep track of all 
            your tasks. Edit and delete with ease.</p>
         </div>
+      
 
         <div class='row-halves'>
             <div class='col'>
+            <a href="https://yw-sd-top-spots.herokuapp.com/" target="_blank">
                 <img
                 class="img-san-diego-city"
         src="img/san-diego-city.jpg"
         alt="A photo of San Diego"
               />
               <h3>San Diego Top Spots</h3>
+              </a>
               <p>Explore a few of San Diego's must see locations with the easy to use app.</p>
               </div>
 
@@ -550,10 +571,15 @@ color: #222;
     <h2>Contact</h2>
     <div class='container'>
       <form action=''>
-        <label for='name'>Name</label>
-        <input type='text' id='name' name='name'>
+        <label for='name'>First Name</label>
+        <input type='text' id='firstName' name='firstName'>
+        
+        <label for='name'>Last Name</label>
+        <input type='text' id='lastName' name='lastName'>
+        
         <label for="email">Email</label>
-        <input type="text" id="email" name="email"> 
+        <input type="text" id="email" name="email">
+        
         <label for="message">Message</label>
         <textarea name="message" style="height:200px" id="message"></textarea>
         <input type="submit" value="message">
@@ -566,9 +592,9 @@ color: #222;
   <section class="contact" id='contact'></section>
   <footer>
  <section class="top-bar">
-   <a href=''><i class='fab fa-facebook-f'></i></a>
-   <a href=''><i class='fab fa-twitter'></i></a>
-   <a href=''><i class='fab fa-github'></i></a>
+   <a href='https://www.flickr.com/photos/166823293@N04/albums' target="_blank"><i class="fab fa-flickr"></i></a>
+   <a href='https://twitter.com/yahshemi?lang=en' target="_blank"><i class='fab fa-twitter'></i></a>
+   <a href='https://github.com/Yahshemi ' target="_blank"><i class='fab fa-github'></i></a>
 
   </section>
   <section class="bottom-bar">

@@ -1,13 +1,14 @@
 const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
-var profile = require("./profile");
+const profile = require("./profile");
 const app = express();
+const sgMail = require("@sendgrid/mail");
 
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use(express.static("public"));
 app.use("/profile", profile);
 
 //Here we're setting the views directory to be ./views
@@ -46,3 +47,14 @@ app.post("/thanks", (req, res) => {
 app.listen(8080, () => {
   console.log("listening at http://localhost:8080");
 });
+// using SendGrid's v3 Node.js Library
+// https://github.com/sendgrid/sendgrid-nodejs
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const msg = {
+  to: "yahshemi@gmail.com",
+  from: "yahshemi@gmail.com",
+  subject: "Thank you!",
+  text: "Your contact has been received.",
+  html: "<strong>Thank you. Lets stay in touch. Best Regards- Yahshemi</strong>"
+};
+sgMail.send(msg);
